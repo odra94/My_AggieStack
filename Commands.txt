@@ -1,0 +1,29 @@
+aggiestack config --hardware hdwr-config.txt
+
+aggiestack config --images image-config.txt
+
+aggiestack config --flavors flavor-config.txt
+
+aggiestack show flavors
+
+aggiestack show all
+
+aggiestack server create --image linux-ubuntu --flavor large taco
+
+aggiestack admin show instances
+
+aggiestack server list
+
+aggiestack server delete taco
+
+aggiestack admin show instances
+
+aggiestack admin show hardware
+
+aggiestack admin evacuate r1
+
+aggiestack admin show instances
+
+aggiestack admin remove k1
+
+aggiestack admin add --mem 32 --disk 32 --vcpus 32 --ip 128.1.1.0 --rack r2 k1
