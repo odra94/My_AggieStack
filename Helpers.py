@@ -345,18 +345,23 @@ def adminServerList(racks = []):
 
 # Show on what physical server instances are running
 def adminShowInstances(racks = []):
+
+    instancesExist = False
     print("Instances currently running: ")
     for rack in racks:
         if rack.servers:
             for server in rack.servers:
                 if server.view:
                     if server.virtualServers:
+                        instancesExist = True
                         print("Server " + server.machineName + " is running the following: ")
                         for vServer in server.virtualServers:
                             print("Instance name: " + vServer.instanceName)
                             print("Image: " + vServer.image.imageName)
                             print("Flavor: " + vServer.flavor.size)
                             print()
+        if not instancesExist:
+            print("None")
 
 
 # Evacuate rack
