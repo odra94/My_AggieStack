@@ -29,5 +29,4 @@ when the hardware configuration was uploaded.
 
 This means if you disable server k1, you can later enable server k1 again. But you cannot create a new server named k5 using that command.
 
-- There is a text file called Commands.txt that contains commands supported by this program which can be copy and pasted to test
-to test out the program.
+- There is a text file called Commands.txt that contains commands supported by this program which can be copy and pasted to test to test out the program.
